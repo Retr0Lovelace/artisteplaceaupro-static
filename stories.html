@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Placeaupro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+   </head>
+  <body class="login-page">
+    <!-- NAVIGATION -->
+    <header class="achat-header">
+      <nav class="main-nav-w profile-nav">
+        <div class="logo-w"><a href="index.html">LOGO</a></div>
+        <div class="nav-input-w">
+          <div class="search">
+            <input type="text" placeholder=" Rechercher" class="search-input" />
+          </div>
+        </div>
+        <div class="nav-links-w">
+          <a href="shop.html">SHOP</a>
+          <a href="galerie.html">GALERIE</a>
+          <a href="stories.html">STORIES</a>
+          <a href="#" id="cart-btn">PANIER</a>
+          <div class="extra-nav-w">
+            <img src="assets/bell-svgrepo-com.svg" alt="Notification" class="bell-icon" />
+            <a href="profile.html"><div class="account-w profile-account"></div></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- OVERLAY PANIER -->
+    <div id="cart-overlay"></div>
+
+    <!-- PANIER -->
+    <div id="cart-panel">
+      <div class="cart-header">
+        <span>VOTRE PANIER</span>
+        <button id="close-cart">✕</button>
+      </div>
+
+      <div class="cart-content">
+        <div class="cart-empty">
+          <img src="assets/cart-icon.png" alt="Panier vide">
+          <p>Votre panier est vide</p>
+          <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="storie-main">
+      <div class="storie-container">
+<div class="squares-wrapper">
+  <div class="square square-left-2"></div>
+  <div class="square square-left-1"></div>
+  <div class="square square-center"></div>
+  <div class="square square-right-1"></div>
+  <div class="square square-right-2"></div>
+</div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-elements">
+        <div class="footer-left">
+          <div class="footer-points">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <a href="#" class="ml-btn">MENTION LÉGALE</a>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
+

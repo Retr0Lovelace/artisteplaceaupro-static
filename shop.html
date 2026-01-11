@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placeaupro - Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsiv.css" />
+  </head>
+
+  <body>
+    <header class="achat-header">
+      <nav class="main-nav">
+        <div class="logo"><a href="index.html">LOGO</a></div>
+        <div class="nav-input">
+          <div class="search">
+            <input type="text" placeholder=" Rechercher" class="search-input" />
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="shop.html">SHOP</a>
+          <a href="galerie.html">GALERIE</a>
+          <a href="stories.html">STORIES</a>
+          <a href="#" id="cart-btn">PANIER</a>
+          <div class="extra-nav">
+            <img
+              src="assets/bell-svgrepo-com.svg"
+              alt="Notification"
+              class="bell-icon"
+            />
+            <a href="profile.html"><div class="account"></div></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- OVERLAY PANIER -->
+    <div id="cart-overlay"></div>
+
+    <!-- PANIER -->
+    <div id="cart-panel">
+      <div class="cart-header">
+        <span>VOTRE PANIER</span>
+        <button id="close-cart">✕</button>
+      </div>
+
+      <div class="cart-content">
+        <div class="cart-empty">
+          <img src="assets/cart-icon.png" alt="Panier vide" />
+          <p>Votre panier est vide</p>
+          <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
+        </div>
+      </div>
+    </div>
+    <section id="hero">
+      <img class="hero-shop" src="assets/shop-hero.png" alt="shop-hero" />
+      <h2 class="hero-title-shop">ART NAME</h2>
+      <p class="hero-subtitle-shop">AND SHARE YOUR DESIGN</p>
+      <div class="hero-subsubtitle">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+      </div>
+    </section>
+    <section id="articles">
+      <div class="articles-content">
+        <div class="article-cards">
+          <div class="article-card">
+            <img src="assets/image.png" alt="Article 1" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image1.png" alt="Article 2" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image2.png" alt="Article 3" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image3.png" alt="Article 4" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+        </div>
+        <div class="article-cards">
+          <div class="article-card">
+            <img src="assets/image4.png" alt="Article 5" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image5.png" alt="Article 6" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image6.png" alt="Article 7" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image7.png" alt="Article 8" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sub-hero">
+      <div class="sub-hero-container">
+        <div class="sub-hero-image">
+          <img src="assets/shop-sub-hero.png" alt="Sub Hero Image" />
+        </div>
+        <div class="sub-hero-gap"></div>
+        <div class="sub-hero-text">
+          <h2 class="sub-hero-title">DESIGN NAME</h2>
+          <p class="sub-hero-subtitle">AND SHARE YOUR DESIGN</p>
+        </div>
+      </div>
+    </section>
+    <section id="articles">
+      <div class="articles-content">
+        <div class="article-cards">
+          <div class="article-card">
+            <img src="assets/image8.png" alt="Article 1" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image9.png" alt="Article 2" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image10.png" alt="Article 3" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+          <div class="article-card">
+            <img src="assets/image11.png" alt="Article 4" />
+            <h4>LOREM IPSUM</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+            <a href="achat.html">AJOUTER AU PANIER</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-elements">
+        <div class="footer-left">
+          <div class="footer-points">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <a href="#" class="ml-btn">MENTION LÉGALE</a>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

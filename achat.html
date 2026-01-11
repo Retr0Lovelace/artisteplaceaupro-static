@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placeaupro - Achat</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsiv.css" />
+</head>
+
+<body class="achat-page">
+  <header class="achat-header">
+    <nav class="main-nav" style="background-color: transparent;">
+      <div class="logo"><a href="index.html">LOGO</a></div>
+      <div class="nav-input">
+        <div class="search">
+          <input type="text" placeholder=" Rechercher" class="search-input" style="background-color: transparent;" />
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="shop.html">SHOP</a>
+        <a href="galerie.html">GALERIE</a>
+        <a href="stories.html">STORIES</a>
+        <a href="#" id="cart-btn">PANIER</a>
+        <div class="extra-nav">
+          <img src="assets/bell-svgrepo-com.svg" alt="Notification" class="bell-icon" />
+          <a href="profile.html"><div class="account"></div></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- OVERLAY -->
+  <div id="cart-overlay"></div>
+
+  <!-- PANIER -->
+  <div id="cart-panel">
+    <div class="cart-header">
+      <span>VOTRE PANIER</span>
+      <button id="close-cart">✕</button>
+    </div>
+
+    <div class="cart-content">
+      <div class="cart-empty">
+        <img src="assets/cart-icon.png" alt="Panier vide">
+        <p>Votre panier est vide</p>
+        <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="article">
+    <div class="article-container">
+
+      <!-- IMAGE -->
+      <div class="article-image">
+        <img src="assets/article.jpg" alt="Oeuvre" />
+
+        <div class="article-image-index">
+          <span>01</span>
+          <span>02</span>
+          <span>03</span>
+          <span>04</span>
+          <span>05</span>
+        </div>
+      </div>
+
+      <!-- TEXTE -->
+      <div class="article-content">
+        <div class="article-description">
+
+          <h2 class="article-title">NOM DE L’ŒUVRE</h2>
+
+          <p class="article-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries.
+          </p>
+
+          <p class="article-text small">
+            the industry's standard dummy text ever since the 1500s.
+          </p>
+
+          <hr />
+
+          <h3 class="article-subtitle">INFOS SUR L’ARTISTE
+
+            <p class="article-text small">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text
+            </p>
+          </h3>
+        </div>
+
+        <button class="article-btn">AJOUTER AU PANIER</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="artiste-banner">
+    <div class="artiste-banner-container">
+      <div class="artiste-banner-image">
+        <img src="assets/artiste.jpg" alt="Image de l'artiste" />
+        <span class="artiste-banner-image-label">PHOTO DE L’ARTISTE</span>
+      </div>
+      <div class="artiste-banner-text">
+        <div class="artiste-banner-top">
+          <p class="artiste-banner-title">BIOGRAPHIE</p>
+        </div>
+        <div class="artiste-banner-center">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text.
+            <br />
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
+          </p>
+        </div>
+        <div class="artiste-banner-bottom">
+          <div class="artiste-banner-bottom-title">CONTACT</div>
+          <div class="artiste-banner-contact">
+            <div>@Loremipsum</div>
+            <div>Mail de l’artist</div>
+            <div>Numéro de téléphone</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="articles">
+    <div class="articles-content">
+      <div class="article-cards">
+        <div class="article-card">
+          <img src="assets/image8.png" alt="Article 1" />
+          <h4>LOREM IPSUM</h4>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+          </p>
+          <a href="#" class="article-add-to-cart">AJOUTER AU PANIER</a>
+        </div>
+        <div class="article-card">
+          <img src="assets/image9.png" alt="Article 2" />
+          <h4>LOREM IPSUM</h4>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+          </p>
+          <a href="#" class="article-add-to-cart">AJOUTER AU PANIER</a>
+        </div>
+        <div class="article-card">
+          <img src="assets/image10.png" alt="Article 3" />
+          <h4>LOREM IPSUM</h4>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+          </p>
+          <a href="#" class="article-add-to-cart">AJOUTER AU PANIER</a>
+        </div>
+        <div class="article-card">
+          <img src="assets/image11.png" alt="Article 4" />
+          <h4>LOREM IPSUM</h4>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+          </p>
+          <a href="#" class="article-add-to-cart">AJOUTER AU PANIER</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-elements">
+      <div class="footer-left">
+        <div class="footer-points">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <a href="#" class="ml-btn">MENTION LÉGALE</a>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
