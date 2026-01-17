@@ -62,6 +62,59 @@ function updateNavGradients() {
 
 if (mainNavs.length > 0 || mainNavsW.length > 0) {
   window.addEventListener("scroll", updateNavGradients);
-  // Mise à jour initiale (au cas où on arrive déjà plus bas dans la page)
   updateNavGradients();
 }
+
+function resizeMasonryItem(item) {
+  const grid = document.querySelector('.masonry');
+  const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('gap'));
+
+  const img = item.querySelector('img');
+  const itemHeight = img.getBoundingClientRect().height;
+
+  const rowSpan = Math.ceil((itemHeight + rowGap) / (rowHeight + rowGap));
+  item.style.gridRowEnd = `span ${rowSpan}`;
+}
+
+function resizeAllMasonryItems() {
+  document.querySelectorAll('.item').forEach(item => resizeMasonryItem(item));
+}
+
+window.addEventListener('load', () => {
+  resizeAllMasonryItems();
+
+  // animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.item').forEach(item => observer.observe(item));
+});
+
+window.addEventListener('resize', resizeAllMasonryItems);
+
+const imgoverlay = document.getElementById("image-overlay");
+const overlayImg = document.getElementById("overlay-img");
+
+/* ouvrir image */
+document.addEventListener("click", (e) => {
+  const img = e.target.closest(".item img");
+
+  if (img) {
+    overlayImg.src = img.src;
+    imgoverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+});
+
+/* fermer image */
+imgoverlay.addEventListener("click", () => {
+  imgoverlay.classList.remove("active");
+  overlayImg.src = "";
+  document.body.style.overflow = "";
+});

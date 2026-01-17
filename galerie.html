@@ -1,83 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Placeaupro - Achat</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julee&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsiv.css" />
-</head>
+  </head>
 
-<body class="galerie-page">
+  <body class="galerie-page">
     <header class="achat-header">
-        <nav class="main-nav" style="background-color: transparent;">
-            <div class="logo"><a href="index.html">LOGO</a></div>
-            <div class="nav-input">
-                <div class="search">
-                    <input type="text" placeholder=" Rechercher" class="search-input"
-                        style="background-color: transparent;" />
-                </div>
-            </div>
+      <nav class="main-nav" style="background-color: transparent">
+        <div class="logo"><a href="index.html">LOGO</a></div>
+        <div class="nav-input">
+          <div class="search">
+            <input
+              type="text"
+              placeholder=" Rechercher"
+              class="search-input"
+              style="background-color: transparent"
+            />
+          </div>
+        </div>
 
-            <div class="nav-links">
-                <a href="shop.html">SHOP</a>
-                <a href="galerie.html">GALERIE</a>
-                <a href="stories.html">STORIES</a>
-                <a href="#" id="cart-btn">PANIER</a>
-                <div class="extra-nav">
-                    <img src="assets/bell-svgrepo-com.svg" alt="Notification" class="bell-icon" />
-                    <a href="profile.html"><div class="account"></div></a>
-                </div>
-            </div>
-        </nav>
+        <div class="nav-links">
+          <a href="shop.html">SHOP</a>
+          <a href="galerie.html">GALERIE</a>
+          <a href="stories.html">STORIES</a>
+          <a href="#" id="cart-btn">PANIER</a>
+          <div class="extra-nav">
+            <img
+              src="assets/bell-svgrepo-com.svg"
+              alt="Notification"
+              class="bell-icon"
+            />
+            <a href="profile.html"><div class="account"></div></a>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- OVERLAY -->
     <div id="cart-overlay"></div>
 
     <!-- PANIER -->
     <div id="cart-panel">
-        <div class="cart-header">
-            <span>VOTRE PANIER</span>
-            <button id="close-cart">✕</button>
-        </div>
+      <div class="cart-header">
+        <span>VOTRE PANIER</span>
+        <button id="close-cart">✕</button>
+      </div>
 
-        <div class="cart-content">
-            <div class="cart-empty">
-                <img src="assets/cart-icon.png" alt="Panier vide">
-                <p>Votre panier est vide</p>
-                <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
-            </div>
+      <div class="cart-content">
+        <div class="cart-empty">
+          <img src="assets/cart-icon.png" alt="Panier vide" />
+          <p>Votre panier est vide</p>
+          <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
         </div>
+      </div>
     </div>
 
     <section class="categories">
-        <button class="category">Illustration</button>
-        <button class="category">Photographie</button>
-        <button class="category">Graphisme</button>
-        <button class="category">Peinture</button>
-        <button class="category">Digital Painting</button>
-        <button class="category">Motion Design</button>
+      <button class="category">Illustration</button>
+      <button class="category">Photographie</button>
+      <button class="category">Graphisme</button>
+      <button class="category">Peinture</button>
+      <button class="category">Digital Painting</button>
+      <button class="category">Motion Design</button>
     </section>
 
+    <section class="galerie">
+      <div class="masonry">
+        <!-- 20 images -->
+        <div class="item"><img src="galerie-asset/img1.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img2.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img3.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img4.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img5.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img6.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img7.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img8.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img9.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img10.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img11.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img12.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img13.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img14.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img15.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img16.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img17.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img18.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img19.jpg" alt="" /></div>
+        <div class="item"><img src="galerie-asset/img20.jpg" alt="" /></div>
+      </div>
+    </section>
 
     <footer>
-        <div class="footer-elements">
-            <div class="footer-left">
-                <div class="footer-points">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <p>Lorem ipsum dolor sit amet</p>
-            </div>
-            <a href="#" class="ml-btn">MENTION LÉGALE</a>
+      <div class="footer-elements">
+        <div class="footer-left">
+          <div class="footer-points">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet</p>
         </div>
+        <a href="#" class="ml-btn">MENTION LÉGALE</a>
+      </div>
     </footer>
+    <!-- IMAGE OVERLAY -->
+    <div id="image-overlay">
+      <img id="overlay-img" src="" alt="" />
+    </div>
 
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>
