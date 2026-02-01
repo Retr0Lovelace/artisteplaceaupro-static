@@ -42,28 +42,28 @@ body.home-page header {
 body.home-page #hero {
   position: relative;
   width: 100%;
-  margin-top: 140px; /* espace sous la nav sticky */
-  min-height: calc(
-    100vh - 140px
-  ); /* occupe toute la hauteur visible sous la nav */
+  margin-top: 0;
   overflow: hidden;
+  display: block; /* Assure que le hero prend bien sa hauteur */
 }
 
 body.home-page #hero .hero-content {
-  position: relative;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* aligne le texte en haut de l'image */
+  align-items: flex-start;
+  padding-left: 6vw;
+  padding-top: 432px; /* espace entre le haut de l'image et le début du texte */
   z-index: 1;
+  color: #ffe9d1;
 }
 
 body.home-page #hero img.hero-bg {
-  width: 100%;
-  height: 100%;
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: 0;
-  margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 body.home-page #hero .hero-content h1 {
@@ -83,8 +83,64 @@ body.home-page #hero .hero-content h1 {
 
 body.home-page #hero .hero-content p {
   font-family: inter, sans-serif;
+  font-weight: 400;
+  max-width: 600px;
   font-size: 18px;
-  margin: 4px 0;
+  margin: 54px 0;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/* ============================ WINDOWS SECTION ============================ */
+body.home-page #windows {
+  position: relative;
+  width: 100%;
+  margin-top: 100px; /* 100px en dessous du hero */
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+body.home-page #windows .windows-container {
+  display: flex;
+  gap: 8px; /* fenêtres plus rapprochées entre elles */
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+body.home-page #windows .window-card {
+  position: relative;
+  display: inline-block;
+  width: 560px; /* taille de la fenêtre réduite mais alignée */
+}
+
+body.home-page #windows .window-frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2; /* le cadre passe au-dessus du contenu */
+}
+
+body.home-page #windows .window-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* sous le cadre */
+}
+
+body.home-page #windows .window-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .achat-header {

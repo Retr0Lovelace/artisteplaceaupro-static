@@ -1,70 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placeaupro - Acceuil</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placeaupro - Acceuil</title>
-  <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsiv.css" />
+  </head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <body class="home-page">
+    <header>
+      <nav class="main-nav-w profile-nav" style="background-color: transparent">
+        <div class="logo-w"><a href="index.html">LOGO</a></div>
+        <div class="nav-input-w">
+          <div class="search">
+            <input
+              type="text"
+              placeholder=" Rechercher"
+              class="search-input"
+              style="background-color: transparent"
+            />
+          </div>
+        </div>
+        <div class="nav-links-w">
+          <a href="shop.html">SHOP</a>
+          <a href="galerie.html">GALERIE</a>
+          <a href="stories.html">STORIES</a>
+          <a href="#" id="cart-btn">PANIER</a>
+          <div class="extra-nav-w">
+            <img
+              src="assets/bell-svgrepo-com.svg"
+              alt="Notification"
+              class="bell-icon"
+            />
+            <a href="profile.html">
+              <div class="account-w profile-account"></div>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- OVERLAY PANIER -->
+    <div id="cart-overlay"></div>
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="responsiv.css" />
-</head>
+    <!-- PANIER -->
+    <div id="cart-panel">
+      <div class="cart-header">
+        <span>VOTRE PANIER</span>
+        <button id="close-cart">✕</button>
+      </div>
 
-<body class="home-page">
-
-  <header>
-    <nav class="main-nav-w profile-nav" style="background-color: transparent;">
-      <div class="logo-w"><a href="index.html">LOGO</a></div>
-      <div class="nav-input-w">
-        <div class="search">
-          <input type="text" placeholder=" Rechercher" class="search-input" style="background-color: transparent;" />
+      <div class="cart-content">
+        <div class="cart-empty">
+          <img src="assets/cart-icon.png" alt="Panier vide" />
+          <p>Votre panier est vide</p>
+          <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
         </div>
       </div>
-      <div class="nav-links-w">
-        <a href="shop.html">SHOP</a>
-        <a href="galerie.html">GALERIE</a>
-        <a href="stories.html">STORIES</a>
-        <a href="#" id="cart-btn">PANIER</a>
-        <div class="extra-nav-w">
-          <img src="assets/bell-svgrepo-com.svg" alt="Notification" class="bell-icon" />
-          <a href="profile.html">
-            <div class="account-w profile-account"></div>
-          </a>
+    </div>
+
+    <section id="hero">
+      <img class="hero-bg" src="image.png" alt="hero" />
+      <div class="hero-content">
+        <h1>DESIGN</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries
+        </p>
+      </div>
+    </section>
+    <section id="windows">
+      <div class="windows-container">
+        <div class="window-card">
+          <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
+          <div class="window-content">
+            <img src="assets/image.png" alt="Contenu 1" />
+          </div>
+        </div>
+        <div class="window-card">
+          <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
+          <div class="window-content">
+            <img src="assets/image.png" alt="Contenu 2" />
+          </div>
+        </div>
+        <div class="window-card">
+          <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
+          <div class="window-content">
+            <img src="assets/image.png" alt="Contenu 3" />
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- NAVIGATION BOTTOM STICKY -->
+    <nav class="bottom-nav">
+      <a href="galerie.html" class="bottom-nav-item">
+        <i class="fas fa-square"></i>
+        <span>Galerie</span>
+      </a>
+      <a href="#" class="bottom-nav-item plus">
+        <i class="fas fa-plus"></i>
+      </a>
+      <a href="shop.html" class="bottom-nav-item">
+        <i class="fas fa-shopping-bag"></i>
+        <span>Shop</span>
+      </a>
+      <a href="profile.html" class="bottom-nav-item">
+        <i class="fas fa-user"></i>
+        <span>Profil</span>
+      </a>
     </nav>
-  </header>
-  <!-- OVERLAY PANIER -->
-  <div id="cart-overlay"></div>
-
-  <!-- PANIER -->
-  <div id="cart-panel">
-    <div class="cart-header">
-      <span>VOTRE PANIER</span>
-      <button id="close-cart">✕</button>
-    </div>
-
-    <div class="cart-content">
-      <div class="cart-empty">
-        <img src="assets/cart-icon.png" alt="Panier vide">
-        <p>Votre panier est vide</p>
-        <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
-      </div>
-    </div>
-  </div>
-
-  <section id="hero">
-    <img class="hero-bg" src="image.png" alt="hero">
-    <div class="hero-content">
-      <h1>DESIGN</h1>
-      <p>Inspire, crée et expose tes œuvres au monde entier.</p>
-      <p class="hero-subtext">Illustration, photographie, design graphique et plus encore.</p>
-    </div>
-  </section>
-</body>
-
+    <script src="scripts.js"></script>
+  </body>
 </html>

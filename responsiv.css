@@ -1,11 +1,169 @@
-@media (max-width: 768px) {
-  .article-card {
-    flex: 1 1 100%;
-  }
-}
+/* =========================================== RESPONSIVE MOBILE =========================================== */
 
-/* Responsive : mobile */
 @media screen and (max-width: 900px) {
+  /* ============================ NAVIGATION RESPONSIVE ============================ */
+  
+  /* Navigation principale - Logo maison à gauche, recherche au centre, panier à droite */
+  .main-nav,
+  .main-nav-w {
+    padding: 15px 20px;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  /* Logo remplacé par icône maison */
+  .logo,
+  .logo-w {
+    min-width: 40px;
+  }
+
+  .logo a,
+  .logo-w a {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+  }
+
+  .logo a::before,
+  .logo-w a::before {
+    content: "\f015"; /* Font Awesome home icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #406f76;
+  }
+
+  .logo-w a::before {
+    color: #fff;
+  }
+
+  /* Barre de recherche prend plus d'espace */
+  .nav-input,
+  .nav-input-w {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+  }
+
+  .nav-input input,
+  .nav-input-w input {
+    width: 100%;
+  }
+
+  /* Cacher les liens de navigation et les remplacer par un panier */
+  .nav-links,
+  .nav-links-w {
+    gap: 0;
+    min-width: 40px;
+  }
+
+  /* Cacher tous les liens sauf le panier */
+  .nav-links > a:not(#cart-btn),
+  .nav-links-w > a:not(#cart-btn) {
+    display: none !important;
+  }
+
+  .extra-nav,
+  .extra-nav-w {
+    display: none !important;
+  }
+
+  /* Panier visible et stylisé */
+  #cart-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    position: relative;
+  }
+
+  #cart-btn::before {
+    content: "\f07a"; /* Font Awesome shopping cart icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #406f76;
+  }
+
+  .nav-links-w #cart-btn::before {
+    color: #fff;
+  }
+
+  /* Navigation sticky en bas */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0 calc(12px + env(safe-area-inset-bottom));
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #406f76;
+    font-size: 10px;
+    gap: 4px;
+    flex: 1;
+    transition: color 0.3s;
+  }
+
+  .bottom-nav-item:hover {
+    color: #54a9b7;
+  }
+
+  .bottom-nav-item i {
+    font-size: 22px;
+  }
+
+  .bottom-nav-item.plus i {
+    font-size: 28px;
+  }
+
+  .bottom-nav-item span {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ============================ SHOP RESPONSIVE ============================ */
+  
+  /* Produits en 2 par 2 */
+  .article-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .article-card {
+    flex: none;
+    max-width: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  /* Sub hero proportionné */
   .sub-hero-container {
     flex-direction: column;
   }
@@ -16,6 +174,12 @@
     flex: 1 1 100%;
   }
 
+  .sub-hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
   .sub-hero-title {
     font-size: 50px;
     text-align: center;
@@ -24,5 +188,183 @@
   .sub-hero-text {
     text-align: center;
     padding: 20px;
+  }
+
+  /* ============================ PAGE ACHAT RESPONSIVE ============================ */
+  
+  .article-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .article-image img {
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .article-content {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Description plus bas */
+  .article-description {
+    margin-bottom: 30px;
+    order: 2;
+  }
+
+  /* Bouton ajouter au panier sous l'œuvre (avant la description) */
+  .article-btn {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ============================ GALERIE RESPONSIVE ============================ */
+  
+  /* Images en 2 par 2 */
+  .masonry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* ============================ STORIES RESPONSIVE ============================ */
+  
+  .squares-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .square-center {
+    width: 200px;
+    height: 200px;
+  }
+
+  .square-left-1,
+  .square-right-1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .square-left-2,
+  .square-right-2 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .square-left-1 {
+    transform: translateX(-180px);
+  }
+
+  .square-left-2 {
+    transform: translateX(-260px);
+  }
+
+  .square-right-1 {
+    transform: translateX(180px);
+  }
+
+  .square-right-2 {
+    transform: translateX(260px);
+  }
+
+  /* ============================ PROFIL RESPONSIVE ============================ */
+  
+  /* Cards en 2 par 2 */
+  .profile-board-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .profile-board-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .profile-sections,
+  .section-divider,
+  .profile-actions {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  /* ============================ HOME PAGE RESPONSIVE ============================ */
+  
+  body.home-page #hero .hero-content {
+    padding-top: 200px;
+    padding-left: 4vw;
+  }
+
+  body.home-page #hero .hero-content h1 {
+    font-size: 100px;
+  }
+
+  body.home-page #hero .hero-content p {
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  body.home-page #windows {
+    margin-top: 50px;
+  }
+
+  body.home-page #windows .windows-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  body.home-page #windows .window-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* =========================================== NAVIGATION BOTTOM STICKY =========================================== */
+
+/* Le nav bottom sera ajouté via HTML, mais on le style ici */
+.bottom-nav {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .bottom-nav {
+    display: flex;
+  }
+
+  /* Espace en bas pour éviter que le contenu soit caché */
+  body {
+    padding-bottom: 80px;
+  }
+
+  body.home-page {
+    padding-bottom: 80px;
+  }
+
+  body.achat-page,
+  body.galerie-page,
+  body.profile-page {
+    padding-bottom: 80px;
+  }
+
+  /* Footer avec espace supplémentaire */
+  footer {
+    margin-bottom: 80px;
   }
 }
