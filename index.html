@@ -17,59 +17,55 @@
     <link rel="stylesheet" href="responsiv.css" />
   </head>
 
-  <body class="home-page">
-    <header>
-      <nav class="main-nav-w profile-nav" style="background-color: transparent">
-        <div class="logo-w"><a href="index.html">LOGO</a></div>
-        <div class="nav-input-w">
-          <div class="search">
-            <input
-              type="text"
-              placeholder=" Rechercher"
-              class="search-input"
-              style="background-color: transparent"
-            />
-          </div>
-        </div>
-        <div class="nav-links-w">
-          <a href="shop.html">SHOP</a>
-          <a href="galerie.html">GALERIE</a>
-          <a href="stories.html">STORIES</a>
-          <a href="#" id="cart-btn">PANIER</a>
-          <div class="extra-nav-w">
-            <img
-              src="assets/bell-svgrepo-com.svg"
-              alt="Notification"
-              class="bell-icon"
-            />
-            <a href="profile.html">
-              <div class="account-w profile-account"></div>
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- OVERLAY PANIER -->
-    <div id="cart-overlay"></div>
-
-    <!-- PANIER -->
-    <div id="cart-panel">
-      <div class="cart-header">
-        <span>VOTRE PANIER</span>
-        <button id="close-cart">✕</button>
-      </div>
-
-      <div class="cart-content">
-        <div class="cart-empty">
-          <img src="assets/cart-icon.png" alt="Panier vide" />
-          <p>Votre panier est vide</p>
-          <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
+  <header>
+    <nav class="main-nav-w profile-nav" style="background-color: transparent">
+      <div class="logo-w"><a href="index.html">LOGO</a></div>
+      <div class="nav-input-w">
+        <div class="search">
+          <input
+            type="text"
+            placeholder=" Rechercher"
+            class="search-input"
+            style="background-color: transparent"
+          />
         </div>
       </div>
+      <div class="nav-links-w">
+        <a href="shop.html">SHOP</a>
+        <a href="galerie.html">GALERIE</a>
+        <a href="stories.html">STORIES</a>
+        <a href="#" id="cart-btn">PANIER</a>
+        <div class="extra-nav-w">
+          <img
+            src="assets/bell-svgrepo-com.svg"
+            alt="Notification"
+            class="bell-icon"
+          />
+          <a href="profile.html">
+            <div class="account-w profile-account"></div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="cart-overlay"></div>
+
+  <div id="cart-panel">
+    <div class="cart-header">
+      <span>VOTRE PANIER</span>
+      <button id="close-cart">✕</button>
     </div>
 
+    <div class="cart-content">
+      <div class="cart-empty">
+        <img src="assets/cart-icon.png" alt="Panier vide" />
+        <p>Votre panier est vide</p>
+        <a href="shop.html" class="cart-btn">EXPLORER NOS PRODUITS</a>
+      </div>
+    </div>
+  </div>
+  <body class="home-page">
     <section id="hero">
-      <img class="hero-bg" src="image.png" alt="hero" />
       <div class="hero-content">
         <h1>DESIGN</h1>
         <p>
@@ -82,29 +78,30 @@
       </div>
     </section>
     <section id="windows">
-      <div class="windows-container">
-        <div class="window-card">
-          <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
-          <div class="window-content">
-            <img src="assets/image.png" alt="Contenu 1" />
+      <div class="hero-content">
+        <div class="windows-container">
+          <div class="window-card">
+            <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
+            <div class="window-content">
+              <img src="assets/image.png" alt="Contenu 1" />
+            </div>
           </div>
-        </div>
-        <div class="window-card">
-          <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
-          <div class="window-content">
-            <img src="assets/image.png" alt="Contenu 2" />
+          <div class="window-card">
+            <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
+            <div class="window-content">
+              <img src="assets/image.png" alt="Contenu 2" />
+            </div>
           </div>
-        </div>
-        <div class="window-card">
-          <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
-          <div class="window-content">
-            <img src="assets/image.png" alt="Contenu 3" />
+          <div class="window-card">
+            <img class="window-frame" src="assets/window.png" alt="Fenêtre" />
+            <div class="window-content">
+              <img src="assets/window3png.png" alt="Contenu 3" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- NAVIGATION BOTTOM STICKY -->
     <nav class="bottom-nav">
       <a href="galerie.html" class="bottom-nav-item">
         <i class="fas fa-square"></i>

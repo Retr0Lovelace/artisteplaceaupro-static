@@ -28,7 +28,10 @@ body.profile-page {
 
 /* ============================ HOME PAGE HERO ============================ */
 body.home-page {
-  padding-top: 0;
+  background-image: url("image.png");
+  background-size: cover;
+  height: 355vh;
+  width: 100%;
 }
 
 body.home-page header {
@@ -40,30 +43,18 @@ body.home-page header {
 }
 
 body.home-page #hero {
-  position: relative;
   width: 100%;
   margin-top: 0;
   overflow: hidden;
-  display: block; /* Assure que le hero prend bien sa hauteur */
+  display: block;
 }
 
 body.home-page #hero .hero-content {
-  position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* aligne le texte en haut de l'image */
-  align-items: flex-start;
+  justify-content: flex-start;
   padding-left: 6vw;
-  padding-top: 432px; /* espace entre le haut de l'image et le début du texte */
-  z-index: 1;
+  padding-top: 200px;
   color: #ffe9d1;
-}
-
-body.home-page #hero img.hero-bg {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 body.home-page #hero .hero-content h1 {
@@ -92,10 +83,10 @@ body.home-page #hero .hero-content p {
 }
 
 /* ============================ WINDOWS SECTION ============================ */
+
 body.home-page #windows {
-  position: relative;
   width: 100%;
-  margin-top: 100px; /* 100px en dessous du hero */
+  margin-top: 450px;
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -103,7 +94,6 @@ body.home-page #windows {
 
 body.home-page #windows .windows-container {
   display: flex;
-  gap: 8px; /* fenêtres plus rapprochées entre elles */
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -112,7 +102,6 @@ body.home-page #windows .windows-container {
 body.home-page #windows .window-card {
   position: relative;
   display: inline-block;
-  width: 560px; /* taille de la fenêtre réduite mais alignée */
 }
 
 body.home-page #windows .window-frame {
@@ -120,27 +109,26 @@ body.home-page #windows .window-frame {
   width: 100%;
   height: auto;
   position: relative;
-  z-index: 2; /* le cadre passe au-dessus du contenu */
+  z-index: 2;
 }
 
 body.home-page #windows .window-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
   width: 60%;
   height: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1; /* sous le cadre */
+  z-index: 1;
 }
 
 body.home-page #windows .window-content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: 80%;
 }
 
 .achat-header {
@@ -162,7 +150,6 @@ body.home-page #windows .window-content img {
   margin-bottom: 120px;
 }
 
-/* Dégradé appliqué uniquement quand on scrolle (via JS) */
 .main-nav.has-gradient {
   background: linear-gradient(
     to bottom,
@@ -243,9 +230,7 @@ body.home-page #windows .window-content img {
 .hero-title-shop {
   position: absolute;
   top: 40px;
-  /* espace haut */
   left: 40px;
-  /* espace gauche */
   line-height: 86%;
   font-family: Julee;
   font-weight: 400;
@@ -470,7 +455,6 @@ body.home-page #windows .window-content img {
   min-height: 750px;
 }
 
-/* IMAGE */
 .article-image {
   position: relative;
   width: 60%;
@@ -482,7 +466,6 @@ body.home-page #windows .window-content img {
   object-fit: cover;
 }
 
-/* Index bas image */
 .article-image-index {
   position: absolute;
   bottom: 30px;
@@ -498,7 +481,6 @@ body.home-page #windows .window-content img {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* CONTENU DROIT */
 .article-content {
   width: 40%;
   display: flex;
@@ -509,7 +491,6 @@ body.home-page #windows .window-content img {
   margin-top: 80px;
 }
 
-/* CARTE */
 .article-description {
   border: 2px solid #406f76;
   padding: 41px 42px 12px 41px;
@@ -547,7 +528,6 @@ body.home-page #windows .window-content img {
   margin-top: 24px;
 }
 
-/* BOUTON */
 .article-btn {
   align-self: center;
   width: 100%;
@@ -670,7 +650,6 @@ body.home-page #windows .window-content img {
   background: #002730;
 }
 
-/* Dégradé bleu appliqué uniquement quand on scrolle (via JS) */
 .main-nav-w.has-gradient {
   background: linear-gradient(
     to bottom,
@@ -966,13 +945,11 @@ body.home-page #windows .window-content img {
 .login-button--secondary {
   background: #ffffff;
   color: #002730;
-  /* même couleur que le fond de la page */
   font-size: 16px;
 }
 
 .login-button--primary {
   background: #d9faff;
-  /* bleu ciel */
   color: #406f76;
   font-size: 16px;
 }
@@ -981,7 +958,6 @@ body.home-page #windows .window-content img {
   filter: brightness(1.05);
 }
 
-/* Footer spécifique login : éléments en blanc sur fond bleu */
 .login-page .footer-elements {
   background-color: #002730;
 }
@@ -1011,7 +987,6 @@ body.home-page #windows .window-content img {
   margin: 60px 20px 40px;
 }
 
-/* Conteneur centré */
 .squares-wrapper {
   position: relative;
   width: 600px;
@@ -1022,14 +997,12 @@ body.home-page #windows .window-content img {
   align-items: center;
 }
 
-/* Style de base des carrés */
 .square {
   position: absolute;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* Carré principal (devant) */
 .square-center {
   background: #ffffff;
   width: 508px;
@@ -1037,7 +1010,6 @@ body.home-page #windows .window-content img {
   z-index: 5;
 }
 
-/* Carrés à gauche */
 .square-left-1 {
   transform: translateX(-330px);
   width: 356px;
@@ -1055,7 +1027,6 @@ body.home-page #windows .window-content img {
   background-color: #4a626a;
 }
 
-/* Carrés à droite */
 .square-right-1 {
   transform: translateX(330px);
 
@@ -1077,7 +1048,6 @@ body.home-page #windows .window-content img {
 
 /* ============================= PANIER ============================= */
 
-/* OVERLAY */
 #cart-overlay {
   position: fixed;
   inset: 0;
@@ -1093,7 +1063,6 @@ body.home-page #windows .window-content img {
   pointer-events: all;
 }
 
-/* PANIER */
 #cart-panel {
   position: fixed;
   right: -100%;
@@ -1108,12 +1077,10 @@ body.home-page #windows .window-content img {
   flex-direction: column;
 }
 
-/* PANIER OUVERT */
 #cart-panel.active {
   right: 0;
 }
 
-/* HEADER PANIER */
 .cart-header {
   display: flex;
   justify-content: space-between;
@@ -1131,7 +1098,6 @@ body.home-page #windows .window-content img {
   cursor: pointer;
 }
 
-/* CONTENU */
 .cart-content {
   flex: 1;
   display: flex;
@@ -1139,7 +1105,6 @@ body.home-page #windows .window-content img {
   align-items: center;
 }
 
-/* PANIER VIDE */
 .cart-empty {
   text-align: center;
   color: #4f747b;
@@ -1182,13 +1147,11 @@ body.home-page #windows .window-content img {
   transition: all 0.25s ease;
 }
 
-/* Hover */
 .category:hover {
   background-color: #4f747b;
   color: white;
 }
 
-/* Actif (optionnel) */
 .category.active {
   background-color: #4f747b;
   color: white;
@@ -1221,11 +1184,10 @@ body.home-page #windows .window-content img {
 .masonry {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 10px; /* clé du système */
+  grid-auto-rows: 10px;
   gap: 20px;
 }
 
-/* item */
 .item {
   border-radius: 18px;
   overflow: hidden;
@@ -1242,13 +1204,11 @@ body.home-page #windows .window-content img {
   border-radius: 18px;
 }
 
-/* hover */
 .item:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* animation */
 .item {
   opacity: 0;
   transform: translateY(30px);
@@ -1260,7 +1220,6 @@ body.home-page #windows .window-content img {
   transition: 0.6s ease;
 }
 
-/* responsive */
 @media (max-width: 900px) {
   .masonry {
     grid-template-columns: repeat(2, 1fr);
